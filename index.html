@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>Random Image Generator</title>
+	</head>
+	<body>	
+		<img src="" id="image">
+		<br><br>
+		<button id="btn">Generate another random image</button>
+	
+		<script type="text/javascript">
+			var randomNumber = Math.random();
+			randomNumber = randomNumber * 8 + 1;
+			randomNumber = Math.floor(randomNumber);
+			document.getElementById("image").src = "images/" + randomNumber + ".jpg";
+			document.getElementById("btn").onclick = function()
+			{	
+				var randomNumber = Math.random();
+				randomNumber = randomNumber * 8 + 1;
+				randomNumber = Math.floor(randomNumber);
+				document.getElementById("image").src = "images/" + randomNumber + ".jpg";
+			}
+		</script>
+	</body>
+</html>
