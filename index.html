@@ -6,7 +6,8 @@
 		<img src="" id="image">
 		<br><br>
 		<button id="btn">Generate another random image</button>
-	
+		<button id="btn2">Generate a beautiful random image from picum</button>
+		<img src="">
 		<script type="text/javascript">
 			var randomNumber = Math.random();
 			randomNumber = randomNumber * 34 + 1;
@@ -18,6 +19,10 @@
 				randomNumber = randomNumber * 34 + 1;
 				randomNumber = Math.floor(randomNumber);
 				document.getElementById("image").src = "images/" + randomNumber + ".jpg";
+			}
+			document.getElementById("btn2").onclick = function()
+			{	
+				document.getElementById("image").src = "https://picsum.photos/540?" + new Date().getTime();
 			}
 		</script>
 	</body>
